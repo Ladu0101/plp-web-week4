@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Budget Tracker</title>
-  
-  <link rel="stylesheet" href="style.css">
-</head>
+<header class="dashboard-header">
+
+  <div class="header-brand">
+    <img src="logo.svg" alt="SpendWise logo" width="64">
+
+    <div>
+      <h1>SpendWise Dashboard</h1>
+      <p class="tagline">Track your income and expenses in one place.</p>
+    </div>
+  </div>
+
+  <div class="header-profile">
+    <span>Welcome!</span>
+  </div>
+
+   <link rel="stylesheet" href="style.css">
+
+</header>
 <body>
+  <div class="dashboard-layout">
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <h2>SpendWise</h2>
+
+    <nav>
+      <a href="#overview">Dashboard</a>
+      <a href="#add-expense">Add Expense</a>
+      <a href="#your-expenses">Transactions</a>
+      <a href="#video-section">Learning</a>
+    </nav>
+  </aside>
+
+  <!-- Main Dashboard Area -->
+  <div class="dashboard-content">
 
   <header>
     <img src="logo.svg" alt="Budget Tracker logo: a green circle with a dollar sign" width="64">
@@ -15,8 +42,122 @@
     <p class="tagline">Track your income and expenses in one place.</p>
   </header>
 
-  <main>
+  <main id="overview">
 
+<!-- Financial Summary Cards -->
+<section class="summary-section">
+
+  <div class="section-heading">
+    <h2>Financial Summary</h2>
+    <p>Your monthly financial position at a glance.</p>
+  </div>
+
+  <div class="summary-grid">
+
+    <!-- Total Income Card -->
+    <article class="summary-card income-card">
+      <h3>Total Income</h3>
+      <p id="total-income">KES 50,000</p>
+      <span>Monthly income</span>
+    </article>
+
+    <!-- Total Expenses Card -->
+    <article class="summary-card expense-card">
+      <h3>Total Expenses</h3>
+      <p id="total-expenses">KES 18,500</p>
+      <span>Money spent</span>
+    </article>
+
+    <!-- Balance Card -->
+    <article class="summary-card balance-card">
+      <h3>Remaining Balance</h3>
+      <p id="remaining-balance">KES 31,500</p>
+      <span>Income minus expenses</span>
+    </article>
+
+  </div>
+</section>
+<!-- End Financial Summary Cards -->
+
+
+<!-- Financial Category Cards -->
+<section class="category-section">
+
+  <div class="section-heading">
+    <h2>Monthly Spending Overview</h2>
+    <p>Monitor your spending across different categories.</p>
+  </div>
+
+  <div class="category-grid">
+
+    <!-- Food Card -->
+    <article class="category-card">
+      <h3>Food</h3>
+      <p class="category-amount">KES 8,500</p>
+      <p class="category-description">Monthly food expenses</p>
+      <div class="category-details">
+        <span>Budget: KES 12,000</span>
+        <span>71% used</span>
+      </div>
+    </article>
+
+    <!-- Transport Card -->
+    <article class="category-card">
+      <h3>Transport</h3>
+      <p class="category-amount">KES 3,200</p>
+      <p class="category-description">Travel and commuting</p>
+      <div class="category-details">
+        <span>Budget: KES 6,000</span>
+        <span>53% used</span>
+      </div>
+    </article>
+
+    <!-- Rent Card -->
+    <article class="category-card">
+      <h3>Rent</h3>
+      <p class="category-amount">KES 10,000</p>
+      <p class="category-description">Monthly accommodation</p>
+      <div class="category-details">
+        <span>Budget: KES 10,000</span>
+        <span>100% used</span>
+      </div>
+    </article>
+
+    <!-- Entertainment Card -->
+    <article class="category-card">
+      <h3>Entertainment</h3>
+      <p class="category-amount">KES 1,500</p>
+      <p class="category-description">Leisure and activities</p>
+      <div class="category-details">
+        <span>Budget: KES 4,000</span>
+        <span>38% used</span>
+      </div>
+    </article>
+
+    <!-- Savings Card -->
+    <article class="category-card">
+      <h3>Savings</h3>
+      <p class="category-amount">KES 5,000</p>
+      <p class="category-description">Monthly savings goal</p>
+      <div class="category-details">
+        <span>Target: KES 8,000</span>
+        <span>63% saved</span>
+      </div>
+    </article>
+
+    <!-- Utilities Card -->
+    <article class="category-card">
+      <h3>Utilities</h3>
+      <p class="category-amount">KES 2,400</p>
+      <p class="category-description">Electricity and water</p>
+      <div class="category-details">
+        <span>Budget: KES 4,000</span>
+        <span>60% used</span>
+      </div>
+    </article>
+
+  </div>
+</section>
     <!-- Interactive element: collapsible help -->
     <details class="help">
       <summary>How to use this tracker</summary>
@@ -86,6 +227,17 @@
     </section>
 
   </main>
+    </div>
+</div>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
